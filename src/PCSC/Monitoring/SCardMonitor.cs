@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Threading;
+using PCSC.BackPortDotNet35;
 using PCSC.Exceptions;
 using PCSC.Extensions;
 
@@ -306,7 +307,7 @@ namespace PCSC.Monitoring
         ///         </list></para>
         /// </remarks>
         public void Start(string readerName) {
-            if (string.IsNullOrWhiteSpace(readerName)) {
+            if (readerName.IsNullOrWhiteSpace()) {
                 throw new ArgumentNullException(nameof(readerName));
             }
 

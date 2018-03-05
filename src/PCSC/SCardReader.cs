@@ -1,4 +1,5 @@
 ﻿using System;
+using PCSC.BackPortDotNet35;
 using PCSC.Exceptions;
 using PCSC.Extensions;
 using PCSC.Interop;
@@ -64,7 +65,7 @@ namespace PCSC
                 throw new ArgumentNullException(nameof(readerName));
             }
 
-            if (string.IsNullOrWhiteSpace(readerName)) {
+            if (readerName.IsNullOrWhiteSpace()) {
                 throw new UnknownReaderException(SCardError.InvalidValue, "Invalid card reader name.");
             }
 

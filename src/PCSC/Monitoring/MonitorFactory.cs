@@ -1,4 +1,5 @@
 ﻿using System;
+using PCSC.BackPortDotNet35;
 
 namespace PCSC.Monitoring
 {
@@ -7,8 +8,8 @@ namespace PCSC.Monitoring
     /// </summary>
     public class MonitorFactory : IMonitorFactory
     {
-        private static readonly Lazy<IMonitorFactory> _instance =
-            new Lazy<IMonitorFactory>(() => new MonitorFactory(ContextFactory.Instance));
+        private static readonly BackPortDotNet35.Lazy<IMonitorFactory> _instance =
+            new BackPortDotNet35.Lazy<IMonitorFactory>(() => new MonitorFactory(ContextFactory.Instance));
 
         private readonly IContextFactory _contextFactory;
 

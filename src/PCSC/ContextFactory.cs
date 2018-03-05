@@ -1,4 +1,5 @@
 ﻿using System;
+using PCSC.BackPortDotNet35;
 
 namespace PCSC
 {
@@ -7,7 +8,7 @@ namespace PCSC
     /// </summary>
     public class ContextFactory : IContextFactory
     {
-        private static readonly Lazy<IContextFactory> _instance = new Lazy<IContextFactory>(() => new ContextFactory());
+        private static readonly BackPortDotNet35.Lazy<IContextFactory> _instance = new BackPortDotNet35.Lazy<IContextFactory>(() => new ContextFactory());
 
         /// <summary>
         /// Default factory instance.

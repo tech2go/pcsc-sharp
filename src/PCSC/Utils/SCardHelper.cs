@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using PCSC.BackPortDotNet35;
 
 namespace PCSC.Utils
 {
@@ -56,7 +57,7 @@ namespace PCSC.Utils
             var lst = new List<byte>();
 
             foreach (var s in array) {
-                if (string.IsNullOrWhiteSpace(s)) {
+                if (s.IsNullOrWhiteSpace()) {
                     continue;
                 }
 
