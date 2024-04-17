@@ -4,6 +4,8 @@ using PCSC.Exceptions;
 using PCSC.Extensions;
 using PCSC.Interop;
 
+//hallo
+
 namespace PCSC
 {
     /// <inheritdoc />
